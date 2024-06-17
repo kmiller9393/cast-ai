@@ -1,5 +1,5 @@
-import Landing from "../components/Landing";
+import Onboarding from "../components/Onboarding";
 
 export default function App() {
-  return <Landing />;
+  return <Onboarding />;
 }

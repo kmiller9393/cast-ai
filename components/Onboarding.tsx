@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import CastButton from "./CastButton";
 import { images } from "../constants";
 
-const Landing = () => {
+const Onboarding = () => {
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
@@ -49,4 +49,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Onboarding;
