@@ -3,5 +3,5 @@
   "compilerOptions": {
     "strict": true
   },
-  "include": ["app", "images.d.ts", "nativewind-env.d.ts"]
+  "include": ["app", "components", "images.d.ts", "nativewind-env.d.ts"]
 }
