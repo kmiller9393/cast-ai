@@ -13,6 +13,7 @@ import { images } from "../../constants";
 import FormField, { KeyboardType } from "../../components/FormField";
 import CastButton from "../../components/CastButton";
 import { Link, router } from "expo-router";
+import { signIn } from "../../lib/appwrite";
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -26,17 +27,16 @@ const SignIn = () => {
   const { height } = useWindowDimensions();
 
   const handleSubmit = async () => {
-    if (form.email === "" || form.password === "") {
+    const { email, password } = form;
+
+    if (!email || !password) {
       Alert.alert("Error", "Please fill in all fields");
     }
 
     setIsSubmitting(true);
 
     try {
-      // await signIn(form.email, form.password);
-      // const result = await getCurrentUser();
-      // setUser(result);
-      // setIsLogged(true);
+      const result = await signIn(email, password);
 
       Alert.alert("Success", "User signed in successfully");
       router.replace("/home");
